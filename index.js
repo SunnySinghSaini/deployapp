@@ -38,7 +38,7 @@ const getGithubData = {
     }
 
 app.get('/', (req, res) => {
-  res.send('<h1>This is first online app deployed by Sunny!!!</h1>')
+  res.send('<h1>This is first online app deployed by Zaman Sheikh!!!</h1>')
 })
 app.get('/login', (req,res) => {
     res.send("Welcome and login here")
