@@ -43,7 +43,7 @@ const getGithubData = {
 };
 
 app.get('/', (req, res) => {
-  res.send('<div>This home page is developed by Sunny !!!<button><a href="https://sunny-app.onrender.com/youtube">Home</a></button></div>');
+  res.send('<div> <h1>This home page is developed by Sunny !!!</h1> <button> <a href="https://sunny-app.onrender.com/youtube">Home </a> </button> </div>');
 });
 
 app.get('/login', (req, res) => {
