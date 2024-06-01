@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "my first app to deploy",
   "main": "index.js",
+  "type":"module",
+  
   "scripts": {
     "start": "node index.js"
+    
   },
   "keywords": [
     "node"
