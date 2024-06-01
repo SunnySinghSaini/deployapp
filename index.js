@@ -43,15 +43,15 @@ const getGithubData = {
 };
 
 app.get('/', (req, res) => {
-  res.send('<div> <h1>This home page is developed by Sunny !!!</h1> <button> <a href="https://sunny-app.onrender.com/youtube">Youtube </a> </button> </div> <div> <button> <a href="https://sunny-app.onrender.com/login">Login </a> </button> </div>');
+  res.send('<div> <h1>This home page is developed by Sunny !!!</h1> <button> <a href="https://sunny-app.onrender.com/youtube">Youtube </a> </button><br> <br> </div> <div> <button> <a href="https://sunny-app.onrender.com/login">Login </a> </button> </div>');
 });
 
 app.get('/login', (req, res) => {
-  res.send('Please Login here for more details...');
+  res.send('<div> <h2> Please Login here for more details...</h2> </div>');
 });
 
 app.get('/youtube', (req, res) => {
-  res.send('<div><button><a href="https://sunny-app.onrender.com/youtube">Click here</a></button></div>');
+  res.send('<h2> Watch and download youtube videos here for free </h2>');
 });
 
 app.get('/github', (req, res) => {
