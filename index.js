@@ -43,11 +43,11 @@ const getGithubData = {
 };
 
 app.get('/', (req, res) => {
-  res.send('<div> <h1>This home page is developed by Sunny !!!</h1> <button> <a href="https://sunny-app.onrender.com/youtube">Home </a> </button> </div>');
+  res.send('<div> <h1>This home page is developed by Sunny !!!</h1> <button> <a href="https://sunny-app.onrender.com/youtube">Youtube </a> </button> </div> <div> <button> <a href="https://sunny-app.onrender.com/login">Login </a> </button> </div>');
 });
 
 app.get('/login', (req, res) => {
-  res.send('<div><button><a href="https://sunny-app.onrender.com/youtube">Login</a></button></div>');
+  res.send('Please Login here for more details...');
 });
 
 app.get('/youtube', (req, res) => {
