@@ -47,11 +47,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-  res.send('<div> <h2> Please Login here for more details...</h2> </div>');
+  res.send('<div> <h2> Please Login here for more details...</h2> <button> <a href="https://sunny-app.onrender.com">Home </a> </button></div>');
 });
 
 app.get('/youtube', (req, res) => {
-  res.send('<h2> Watch and download youtube videos here for free </h2>');
+  res.send('<div> <h2> Watch and download youtube videos here for free </h2><button> <a href="https://sunny-app.onrender.com">Home </a> </button></div>');
 });
 
 app.get('/github', (req, res) => {
