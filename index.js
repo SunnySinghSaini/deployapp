@@ -18,6 +18,20 @@ app.use(express.static('public'));
 
 // Define routes
 app.get('/', (req, res) => {
+
+  //Program to calculate the no. of characters in User name 
+    res.render("index.ejs",{fName:"", lName:""});
+    app.post("/submit", (req, res) => {
+      var firstname = req.body.fName;
+      var lastname = req.body.lName;
+      console.log(firstname,lastname);
+      res.render("index.ejs",{fName:firstname, lName:lastname});
+    });
+
+
+
+  // Program to calculate the no. of characters in User name End here.
+  
   res.send('<div> <h1>This home page is developed by Sunny !!!</h1> <button> <a href="https://sunny-app.onrender.com/youtube">Youtube </a> </button><br> <br> </div> <div> <button> <a href="https://sunny-app.onrender.com/login">Login </a> </button> </div>');
 });
 
