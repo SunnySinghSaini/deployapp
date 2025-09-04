@@ -39,6 +39,26 @@
             background: #f8f9fa;
             margin-top: 30px;
         }
+        /* Progress Circle */
+        .progress-circle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: conic-gradient(rgba(0, 207, 255, 0.5) 0%, #ddd 0%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #343a40;
+            z-index: 1000;
+        }
+        .progress-circle span {
+            position: absolute;
+        }
     </style>
 </head>
 <body>
@@ -149,5 +169,35 @@
         <p>Declaration: I hereby declare that the details furnished by me are true to the best of my knowledge.</p>
         <p>Sunny Singh</p>
     </footer>
+
+    <!-- Progress Circle -->
+    <div class="progress-circle">
+        <span id="progress-text">0%</span>
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.scrollY; 
+            let docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            let scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+            // Dynamic gradient: red → yellow → green
+            let color;
+            if (scrollPercent < 50) {
+                // red to yellow
+                let ratio = scrollPercent / 50;
+                color = `rgb(${255}, ${Math.round(255 * ratio)}, 0)`; 
+            } else {
+                // yellow to green
+                let ratio = (scrollPercent - 50) / 50;
+                color = `rgb(${Math.round(255 * (1 - ratio))}, 255, 0)`; 
+            }
+
+            document.querySelector(".progress-circle").style.background =
+              `conic-gradient(${color} ${scrollPercent}%, rgba(0, 207, 255, 0.2) ${scrollPercent}%)`;
+
+            document.getElementById("progress-text").innerText = scrollPercent + "%";
+        });
+    </script>
 </body>
 </html>
