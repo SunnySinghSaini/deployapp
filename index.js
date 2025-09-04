@@ -21,13 +21,12 @@ app.get('/', (req, res) => {
 
   //Program to calculate the no. of characters in User name 
     res.render("index.ejs",{fName:"", lName:""});
-    app.post("/submit", (req, res) => {
+    });
+  app.post("/submit", (req, res) => {
       var firstname = req.body.fName;
       var lastname = req.body.lName;
       console.log(firstname,lastname);
       res.render("index.ejs",{fName:firstname, lName:lastname});
-    });
-
 
 
   // Program to calculate the no. of characters in User name End here.
